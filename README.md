@@ -121,7 +121,7 @@ In the `main.js` module, invoke the `PotteryList` component function. Take its r
 
 1. Explain how you got the HTML, with the correct data, displayed in the browser?
 
-   > First, I create an object called Pottery and pass the values for Weight, Shape, Height, and Id which is incremented each time the makePottery function is invoked. In the Kiln.js file, I call the firePottery function, which adds a fired property to the object and sets it to true. The function uses an if statement to determine if the pottery is cracked, based on the fireTemp argument. The pottery is then passed to the ToSellOrNotSell function. If the pottery is cracked, it is added to a crackedPottery array. If it is not cracked, the pottery is priced and added to an array. This array is then copied using the usePottery function and subsequently displayed in the HTML through potteryList.js.
+   > First, I create an object called Pottery and pass the values for Weight, Shape, Height, and Id which is incremented each time the makePottery function is invoked. In the Kiln.js file, I call the firePottery function, which adds a fired property to the object and sets it to true. The function uses an if statement to determine if the pottery is cracked, based on the fireTemp argument. The pottery is then passed to the ToSellOrNotSell function. If the pottery is cracked, it is added to a crackedPottery array. If it is not cracked, the pottery is priced and added to an array. This array is then copied using in the usePottery function that displays it in the HTML through potteryList.js.
 
 2. In the **PotteryList** module, when you iterate your pottery, you need to show the evidence of what the **weight** property's value is for the 2nd piece of pottery. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
 
@@ -133,7 +133,7 @@ In the `main.js` module, invoke the `PotteryList` component function. Take its r
 
 4. The pottery shop has learned that there is a set of customers that are willing to buy cracked pottery at a discounted price of $2.50. That means that the cracked pottery should now be displayed in the catalog. Explain the changes that this new business strategy would cause to your algorithm.
 
-   > I would remove line 4 and replace line 11 with an if statement  
+   >In potteryCatalog.js I would remove line 4 and replace line 10 with an if statement  
    if (potteryObjects.cracked === false) {
       potteryStorage.push(potteryObjects)
    } else {
