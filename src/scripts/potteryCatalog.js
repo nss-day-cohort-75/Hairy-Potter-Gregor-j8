@@ -1,6 +1,4 @@
 let potteryStorage = [];
-let pricedPottery = []
-let crackedPottery = []
 
 export const toSellOrNotSell = (potteryObjects) => {
     if (potteryObjects.cracked === false) {
@@ -9,17 +7,15 @@ export const toSellOrNotSell = (potteryObjects) => {
         } else {
             potteryObjects.price = 20
         }
-        pricedPottery.push(potteryObjects)
-        usePottery(pricedPottery)
+        potteryStorage.push(potteryObjects)
     } else {
-        crackedPottery.push(potteryObjects)
+        return
     }
-    return potteryObjects
+    return potteryStorage
 }
-    export const usePottery = (potteryObjects) => {
-        potteryObjects.map(pottery => {
-            return pottery
-        })
-     return potteryObjects[0]
+
+    export const usePottery = (sellPottery) => {
+       const newPotteryArray = sellPottery.map((pottery) => pottery)
+     return newPotteryArray
 }
 
